@@ -1,4 +1,4 @@
 function showGarden() {
-    document.getElementById('invitation').style.display = 'none';
-    document.getElementById('gardenContent').style.display = 'block';
+    document.getElementById('invitation').style.display = 'none'; // Hide the invitation image
+    document.getElementById('gardenContent').style.display = 'block'; // Show the garden image
 }
