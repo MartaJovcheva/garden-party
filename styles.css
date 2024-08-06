@@ -1,0 +1,33 @@
+/* Basic reset for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Centering container for garden image */
+.container {
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for garden image */
+#garden {
+    max-width: 90%; /* Maximum width */
+    max-height: 90%; /* Maximum height */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Style for invitation image */
+#invitation img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
