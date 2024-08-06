@@ -21,9 +21,11 @@ body, html {
 
 /* Style for garden image */
 #garden {
-    max-width: 90%; /* Maximum width */
-    max-height: 90%; /* Maximum height */
+    max-width: 100%; /* Maximum width */
+    max-height: 100%; /* Maximum height */
     object-fit: contain; /* Maintain aspect ratio */
+    width: auto; /* Default to auto width */
+    height: auto; /* Default to auto height */
 }
 
 /* Style for invitation image */
