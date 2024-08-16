@@ -15,28 +15,15 @@
 
     <!-- Container for Garden content -->
     <div class="container" style="display:none;" id="gardenContent">
-        <img id="garden" src="IMG_1353 (1) 2.gif" (" alt="Garden">
+        <!-- Video element for MP4 -->
+        <video id="garden" width="100%" controls>
+            <source src="IMG_1353 (1) 2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
     
     <!-- Container for music -->
     <audio id="audio" src="fairymusic.mp3"></audio>
-
-     <script>
-        function showGarden() {
-            const gardenContent = document.getElementById('gardenContent');
-            const audio = document.getElementById('audio');
-
-            // Toggle the visibility of the garden content
-            if (gardenContent.style.display === 'none') {
-                gardenContent.style.display = 'block';
-                audio.play().catch(error => console.error("Audio playback failed:", error)); // Play the music and catch potential errors
-            } else {
-                gardenContent.style.display = 'none';
-                audio.pause(); // Pause the music
-                audio.currentTime = 0; // Reset the music to the beginning
-            }
-        }
-    </script>
 
 </body>
 </html>
