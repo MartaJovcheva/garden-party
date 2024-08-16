@@ -21,6 +21,23 @@
     <!-- Container for music -->
     <audio id="audio" src="fairymusic.mp3"></audio>
 
+     <script>
+        function showGarden() {
+            const gardenContent = document.getElementById('gardenContent');
+            const audio = document.getElementById('audio');
+
+            // Toggle the visibility of the garden content
+            if (gardenContent.style.display === 'none') {
+                gardenContent.style.display = 'block';
+                audio.play().catch(error => console.error("Audio playback failed:", error)); // Play the music and catch potential errors
+            } else {
+                gardenContent.style.display = 'none';
+                audio.pause(); // Pause the music
+                audio.currentTime = 0; // Reset the music to the beginning
+            }
+        }
+    </script>
+
 </body>
 </html>
 
