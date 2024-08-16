@@ -22,9 +22,29 @@
         </video>
     </div>
     
-    <!-- Container for music -->
-    <audio id="audio" src="fairymusic.mp3" preload="auto"></audio>
+   <!-- Container for music -->
+    <audio id="audio" src="fairymusic.mp3" controls preload="auto"></audio>
 
+    <script>
+        function showGarden() {
+            const gardenContent = document.getElementById('gardenContent');
+            const audio = document.getElementById('audio');
+            const video = document.getElementById('garden');
+
+            // Toggle the visibility of the garden content
+            if (gardenContent.style.display === 'none') {
+                gardenContent.style.display = 'block';
+                video.play().catch(error => console.error("Video playback failed:", error)); // Handle video playback errors
+                audio.play().catch(error => console.error("Audio playback failed:", error)); // Handle audio playback errors
+            } else {
+                gardenContent.style.display = 'none';
+                video.pause(); // Pause the video
+                video.currentTime = 0; // Reset the video to the beginning
+                audio.pause(); // Pause the audio
+                audio.currentTime = 0; // Reset the audio to the beginning
+            }
+        }
+    </script>
 </body>
 </html>
 
